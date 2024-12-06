@@ -7,7 +7,7 @@ REPASO PROGRAMACION
 
 Profesor: Esteban Acevedo
 
-LinkedIn: 
+LinkedIn: linkedin.com/in/esteban-acevedo-aberastain
 
 ## ALUMNO
 
