@@ -1,0 +1,21 @@
+{   
+    "explorer.compactFolders": false,
+    "python.analysis.autoFormatStrings": true,
+    "[python]" :{
+        "editor.defaultFormatter": "charliermash.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "never",
+            "source.organizeImports" : "always"
+        },
+
+    },
+      
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "monosans.djlint",
+        "editor.formatOnSave": true
+    }
+}
