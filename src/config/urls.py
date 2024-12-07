@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from core import views
+from cliente.views import ver_cliente
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,7 +29,8 @@ urlpatterns = [
     path('tirar_dados', views.tirar_dados),
     path('nombre_apellido/', views.nombre_apellido),
     path('ver_notas/', views.ver_nota),
-    path('ejercicio2/', views.datos_usuarios)
+    path('ejercicio2/', views.datos_usuarios),
+    path('clientes/', ver_cliente)
 
 
 ]
