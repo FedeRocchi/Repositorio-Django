@@ -1,5 +1,5 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def saludar(request):
@@ -33,5 +33,25 @@ def tirar_dados(request):
               'fecha': datetime.now()
               }
      return render(request, 'core/dados.html', context=datos)
+
+def nombre_apellido(request):
+    
+     while True:
+          
+          nombre = input("Ingrese su nombre: ")
+          apellido = input("Ingrese su apellido: ")
+
+          if not nombre.isalpha and not apellido.isalpha:
+               continue
+          else:
+               mensaje = {'nombre':nombre,
+                          'apellido': apellido}
+             
+               return render(request, 'core/template.html', context=mensaje)
+          
+def ver_nota(request):
+     lista_notas = [3,5,7,8,2,12,5]
+
+     return render(request,'core/bucles.html', {'notas': lista_notas})
 
           
