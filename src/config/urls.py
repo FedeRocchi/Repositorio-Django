@@ -22,12 +22,13 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludar/', views.saludar),
-    path('saludar-con-etiqueta', views.saludar_con_etiqueta),
+    path('saludar-con-etiqueta/', views.saludar_con_etiqueta),
     path("saludar/<str:nombre>/<str:apellido>", views.saludar_con_parametros),
     path('',views.index),
     path('tirar_dados', views.tirar_dados),
-    path('ejercicio1', views.nombre_apellido),
-    path('ver_notas', views.ver_nota)
+    path('nombre_apellido/', views.nombre_apellido),
+    path('ver_notas/', views.ver_nota),
+    path('ejercicio2/', views.datos_usuarios)
 
 
 ]

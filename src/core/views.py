@@ -52,6 +52,13 @@ def nombre_apellido(request):
 def ver_nota(request):
      lista_notas = [3,5,7,8,2,12,5]
 
-     return render(request,'core/bucles.html', {'notas': lista_notas})
+     return render(request,'core/notas.html', {'notas': lista_notas})
 
+def datos_usuarios(request):
+     datos = [ {'nombre': 'juan', 'email': 'juan@django'},
+
+        {'nombre': 'santi', 'email': 'santi@django'},
+
+        {'nombre': 'agustín', 'email': 'agus@django'}, ]
+     return render(request, 'core/ejercicio2.html', {'usuarios': datos})
           
