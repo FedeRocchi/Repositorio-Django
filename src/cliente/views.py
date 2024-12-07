@@ -1,10 +1,18 @@
 from django.shortcuts import render
 
 # Create your views here.
-from .models import Cliente
+from .models import Cliente, Pais
+
+def index(request):
+    return render(request, 'cliente/index.html')
+
+def cliente_list(request):
+    clientes = Cliente.objects.all()
+    contexto = {'clientes':clientes}
+    return render(request, 'cliente/cliente_list.html', contexto)
 
 
-
-def ver_cliente(request):
-    cliente = Cliente.objects.all()
-    return render(request, 'cliente/index.html', {'clientes': cliente})
+def pais_list(request):
+    paises = Pais.objects.all()
+    contexto = {'paises':paises}
+    return render(request, 'cliente/pais_list.html', contexto)
